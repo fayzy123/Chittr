@@ -142,7 +142,8 @@ const Login = ({ navigation }) => {
                   <FormControl.Label>Email</FormControl.Label>
                   <TextInput
                     style={styles.input}
-                    placeholder="john@example.com"
+                    placeholder="email@example.com"
+                    placeholderTextColor="#D3D3D3"
                     value={email}
                     onChangeText={validateEmail}
                     keyboardType="email-address"
@@ -159,6 +160,7 @@ const Login = ({ navigation }) => {
                   <TextInput
                     style={styles.input}
                     placeholder="••••••••"
+                    placeholderTextColor="#D3D3D3"
                     secureTextEntry
                     value={password}
                     onChangeText={validatePassword}

@@ -145,7 +145,8 @@ const Signup = ({ navigation }) => {
                 </Text>
                 <TextInput
                   style={styles.input}
-                  placeholder="John"
+                  placeholder="First Name"
+                  placeholderTextColor="#D3D3D3"
                   value={firstName}
                   onChangeText={validateFirstName}
                 />
@@ -159,7 +160,8 @@ const Signup = ({ navigation }) => {
                 </Text>
                 <TextInput
                   style={styles.input}
-                  placeholder="Doe"
+                  placeholder="Last Name"
+                  placeholderTextColor="#D3D3D3"
                   value={lastName}
                   onChangeText={validateLastName}
                 />
@@ -173,7 +175,8 @@ const Signup = ({ navigation }) => {
                 </Text>
                 <TextInput
                   style={styles.input}
-                  placeholder="john@example.com"
+                  placeholder="email@example.com"
+                  placeholderTextColor="#D3D3D3"
                   value={email}
                   onChangeText={validateEmail}
                   keyboardType="email-address"
@@ -190,6 +193,7 @@ const Signup = ({ navigation }) => {
                 <TextInput
                   style={styles.input}
                   placeholder="••••••••"
+                  placeholderTextColor="#D3D3D3"
                   secureTextEntry
                   value={password}
                   onChangeText={validatePassword}

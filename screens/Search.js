@@ -117,6 +117,7 @@ const Search = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="Search by name or email"
+          placeholderTextColor="#D3D3D3"
           value={query}
           onChangeText={setQuery}
         />
