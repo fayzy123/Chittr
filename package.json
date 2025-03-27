@@ -35,7 +35,6 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.7",
-    "react-native-dotenv": "^3.4.11",
     "react-native-flash-message": "^0.4.2",
     "react-native-gesture-handler": "~2.20.2",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
@@ -56,7 +55,8 @@
     "expo-module-scripts": "^4.0.4",
     "metro": "^0.81.0",
     "metro-config": "^0.81.0",
-    "metro-runtime": "^0.81.0"
+    "metro-runtime": "^0.81.0",
+    "react-native-dotenv": "^3.4.11"
   },
   "private": true,
   "type": "commonjs"
