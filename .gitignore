@@ -38,3 +38,7 @@ yarn-error.*
 app-example
 package.json
 package-lock.json
+
+echo "service-account.json" >> .gitignore
+.env
+service-account.json
