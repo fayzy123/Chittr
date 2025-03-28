@@ -157,12 +157,13 @@ const PostChit = ({ navigation }) => {
       <View style={styles.container}>
         {loading && <ActivityIndicator size="large" color="#2ecc71" />}
 
-        <Text style={styles.title}>Post a New Chit</Text>
+        <Text style={styles.title}>New Chit</Text>
 
         {/* Text input */}
         <TextInput
           style={styles.input}
           placeholder="What's on your mind?"
+          placeholderTextColor="#D3D3D3"
           value={chitText}
           onChangeText={setChitText}
         />
