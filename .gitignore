@@ -39,6 +39,9 @@ app-example
 package.json
 package-lock.json
 
-echo "service-account.json" >> .gitignore
+
 .env
+firebaseConfig.js
+api/.env
 service-account.json
+
