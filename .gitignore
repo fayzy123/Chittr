@@ -44,4 +44,8 @@ package-lock.json
 firebaseConfig.js
 api/.env
 service-account.json
+echo ".env" >> .gitignore
+echo "api/.env" >> .gitignore
+echo "firebaseConfig.js" >> .gitignore
+
 
