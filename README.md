@@ -1,50 +1,155 @@
-# Welcome to your Expo app 👋
+# Chittr — React Native Firebase App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Chittr is a lightweight Twitter/X-style mobile app built with React Native and Expo, where users can post short messages called **chits**. In addition to text, users can attach images and share their location with each chit. The app includes a complete login and registration system powered by Firebase Authentication, and stores all chits in a real-time Firebase database.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Firebase Authentication (Login & Sign-up)
+- Post and view chits
+- Attach images to chits
+- Share location with chits using Google Maps API
+- Real-time database support via Firebase
+- Built with React Native + Expo
+- Clean configuration using `.env` and `.json` files
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+To get up and running with Chittr, follow the steps below:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clone the repo
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-username/chittr.git
+cd chittr
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Install dependencies
 
-## Learn more
+Make sure you have Node.js and Expo CLI installed.
 
-To learn more about developing your project with Expo, look at the following resources:
+Then run:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm install
+# or
+yarn
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Project Setup (Required Before Running)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+You’ll need to set up your Firebase credentials and environment variables before running the app.
+
+---
+
+### Firebase Configuration
+
+1. In the root of the project, duplicate the provided example config:
+
+```bash
+cp firebaseConfig.example.json firebaseConfig.json
+```
+
+2. Go to [Firebase Console](https://console.firebase.google.com/), create a project (or use an existing one), and register a web app.
+
+3. In your Firebase project settings under "General" > "Your apps", copy the config snippet and paste it into your `firebaseConfig.json`:
+
+```json
+{
+  "apiKey": "YOUR_API_KEY",
+  "authDomain": "YOUR_PROJECT_ID.firebaseapp.com",
+  "projectId": "YOUR_PROJECT_ID",
+  "storageBucket": "YOUR_PROJECT_ID.appspot.com",
+  "messagingSenderId": "YOUR_MESSAGING_SENDER_ID",
+  "appId": "YOUR_APP_ID"
+}
+```
+
+---
+
+### Environment Variables
+
+#### Root `.env` file (for frontend)
+
+1. Copy the example file:
+
+```bash
+cp .env.example .env
+```
+
+2. Fill in your **Google Maps API key**:
+
+```env
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+```
+
+#### API-specific `.env` (for backend)
+
+1. If your project includes a backend inside `Api/`, copy the environment file:
+
+```bash
+cp Api/.env.example Api/.env
+```
+
+2. Fill in the following:
+
+```env
+JWT_SECRET=your_jwt_secret_here
+FIREBASE_DATABASE_URL=https://your-project-id.firebaseio.com
+FIREBASE_SERVICE_ACCOUNT=your_firebase_service_account_json_string
+```
+
+> Tip: Use a tool or script to convert your Firebase service account JSON into a one-line escaped string, or base64-encode it if needed.
+
+---
+
+## Run the App
+
+Once your environment is set up and configs are filled in, start the app with Expo:
+
+```bash
+npx expo start
+```
+
+This will open the Expo Dev Tools in your browser. You can then:
+
+- Scan the QR code with the Expo Go app on your mobile device
+- Press `i` to run on iOS simulator (Mac only)
+- Press `a` to run on Android emulator
+
+---
+
+## Project Structure
+
+```
+chittr/
+├── App.js
+├── firebase.js                  # Firebase initialized using config
+├── firebaseConfig.json          # Actual Firebase config (ignored)
+├── firebaseConfig.example.json  # Template for Firebase setup
+├── .env                         # Root environment file (ignored)
+├── .env.example                 # Template
+├── Api/
+│   ├── .env                     # Backend API secrets (ignored)
+│   └── ...
+├── screens/                     # UI screens
+├── components/                  # Reusable UI components
+└── ...
+```
+
+---
+
+## Contributing
+
+Got ideas? Found a bug? PRs and issues are always welcome.
+
+---
+
+## License
+
+MIT © [Fayzhan K]
