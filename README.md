@@ -144,4 +144,4 @@ chittr/
 
 ## License
 
-MIT © [Fayzhan K]
+Fayzhan K ©
