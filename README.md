@@ -142,14 +142,6 @@ chittr/
 └── ...
 ```
 
----
-
-## Contributing
-
-Got ideas? Found a bug? PRs and issues are always welcome.
-
----
-
 ## License
 
 MIT © [Fayzhan K]
